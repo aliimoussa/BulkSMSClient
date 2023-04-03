@@ -16,7 +16,7 @@ def validate_credentials(credentials):
     return errors
 
 
-def validate_send_sms_request(data):
+def validate_send_sms(data):
     errors = []
     valid_messages = []
     messages = data.get('messages', [])
@@ -44,5 +44,8 @@ def validate_send_sms_request(data):
             errors.append({'message': msg, 'error': 'Destination number and source number can not be the same'})
         else:
             valid_messages.append(msg)
+
+    for msg_error in errors:
+        valid_messages = [msg for msg in valid_messages if msg != msg_error['message']]
 
     return valid_messages, errors

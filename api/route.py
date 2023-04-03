@@ -5,7 +5,7 @@ from flask import Blueprint
 from flask import request, jsonify
 
 from api.utils import get_client, handle_sms
-from api.validators import validate_send_sms_request, validate_credentials
+from api.validators import validate_credentials, validate_send_sms
 
 logger = logging.getLogger(__name__)
 api_bp = Blueprint('api', __name__)
@@ -20,7 +20,8 @@ def hello():
 def send_sms() -> Union[jsonify, Tuple[str, int]]:
     data = request.get_json()
     credentials = data.get('credentials', {})
-    valid_messages, errors = validate_send_sms_request(data)
+    valid_messages, errors = validate_send_sms(data)
+
     credential_errors = validate_credentials(credentials)
     if credential_errors:
         for error in credential_errors:
