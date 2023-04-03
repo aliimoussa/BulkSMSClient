@@ -13,7 +13,7 @@ api_bp = Blueprint('api', __name__)
 
 @api_bp.route('/')
 def hello():
-    return 'hello world'
+    return 'hello worldg'
 
 
 @api_bp.route('/send-sms', methods=['POST'])

@@ -14,15 +14,17 @@ def get_client(credentials):
     client.connect()
 
     # Bind to the SMPP server
-    client.bind_transceiver(system_id=str(credentials.get('system_id')), password=str(credentials.get('password')),
-                            system_type='smpplib')
+    client.bind_transceiver(
+        system_id=str(credentials.get('system_id')),
+        password=str(credentials.get('password')),
+        system_type='smpplib'
+    )
 
     return client
 
 
 def handle_sms(client, messages):
     try:
-
         for msg in messages:
             dest_number = msg.get('dst_number')
             source_number = msg.get('source_number')
@@ -42,7 +44,6 @@ def handle_sms(client, messages):
                     data_coding=encoding_flag,
                     esm_class=msg_type_flag,
                     registered_delivery=True,
-
                 )
                 print(pdu.sequence)
 
@@ -53,11 +54,10 @@ def handle_sms(client, messages):
     # Unbind and Disconnect from the SMPP server
     client.unbind()
     client.disconnect()
-    return make_response("SMS messages sent successfully.")
-
-    # Handle delivery receipts (and any MO SMS)
+    # return make_response("SMS messages sent successfully.")
 
 
+# Handle delivery receipts (and any MO SMS)
 def handle_deliver_sm(pdu):
     print(f'delivered: {pdu.sequence} {pdu.receipted_message_id}\n')
     return 0
