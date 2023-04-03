@@ -4,7 +4,7 @@ from typing import Union, Tuple
 from flask import Blueprint
 from flask import request, jsonify
 
-from api.utils import get_client, handle_sms, query_sms
+from api.utils import get_client, handle_sms
 from api.validators import validate_send_sms_request, validate_credentials
 
 logger = logging.getLogger(__name__)

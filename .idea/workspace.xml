@@ -7,6 +7,7 @@
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/config.py" afterDir="false" />
@@ -47,6 +48,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -158,7 +160,7 @@
       <workItem from="1680414494940" duration="1107000" />
       <workItem from="1680506541575" duration="919000" />
       <workItem from="1680508761637" duration="1420000" />
-      <workItem from="1680510218606" duration="8158000" />
+      <workItem from="1680510218606" duration="8652000" />
     </task>
     <servers />
   </component>
@@ -184,24 +186,28 @@
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1680509353870" />
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1680419010910" />
-    <state width="1323" height="320" key="GridCell.Tab.0.bottom" timestamp="1680517723212">
+    <state width="1323" height="365" key="GridCell.Tab.0.bottom" timestamp="1680519062473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="365" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1680519062473" />
     <state width="1323" height="320" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1680517723212" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1680414564484" />
-    <state width="1323" height="320" key="GridCell.Tab.0.center" timestamp="1680517723211">
+    <state width="1323" height="365" key="GridCell.Tab.0.center" timestamp="1680519062473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="365" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1680519062473" />
     <state width="1323" height="320" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1680517723211" />
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1680414564482" />
-    <state width="1323" height="320" key="GridCell.Tab.0.left" timestamp="1680517723211">
+    <state width="1323" height="365" key="GridCell.Tab.0.left" timestamp="1680519062472">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="365" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1680519062472" />
     <state width="1323" height="320" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1680517723211" />
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1680414564478" />
-    <state width="1323" height="320" key="GridCell.Tab.0.right" timestamp="1680517723212">
+    <state width="1323" height="365" key="GridCell.Tab.0.right" timestamp="1680519062473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="365" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1680519062473" />
     <state width="1323" height="320" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1600.860@0.0.1366.728" timestamp="1680517723212" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1680414564482" />
     <state width="1323" height="290" key="GridCell.Tab.1.bottom" timestamp="1680517693871">
@@ -269,24 +275,9 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/api/route.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/api/route.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/api/route.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/api/route.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/tests/test_send_sms.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
