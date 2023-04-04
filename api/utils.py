@@ -1,5 +1,3 @@
-import time
-
 import smpplib.client
 import smpplib.consts
 import smpplib.gsm

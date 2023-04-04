@@ -1,6 +1,3 @@
-import unittest
-from unittest.mock import patch
-from api.route import send_sms
 from flask import Flask
 
 app = Flask(__name__)
