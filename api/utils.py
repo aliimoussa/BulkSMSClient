@@ -68,6 +68,3 @@ def handle_deliver_sm(pdu):
     print(f'delivered: {pdu.sequence} {pdu.receipted_message_id}\n')
     return 0
 
-
-def stop_listening(client):
-    client.stop_listening()
