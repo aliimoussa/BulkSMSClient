@@ -32,7 +32,6 @@ def handle_sms(client, messages):
             source_number = msg.get('source_number')
             content = msg.get('content')
             parts, encoding_flag, msg_type_flag = smpplib.gsm.make_parts(f'u\'{content}')
-            print(f'len parts{len(parts)}')
             for part in parts:
                 pdu = client.send_message(
                     source_addr_ton=smpplib.consts.SMPP_TON_ALNUM,
