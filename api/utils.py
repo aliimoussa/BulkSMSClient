@@ -1,3 +1,5 @@
+import time
+
 import smpplib.client
 import smpplib.consts
 import smpplib.gsm
@@ -30,6 +32,7 @@ def handle_sms(client, messages):
             source_number = msg.get('source_number')
             content = msg.get('content')
             parts, encoding_flag, msg_type_flag = smpplib.gsm.make_parts(f'u\'{content}')
+            print(f'len parts{len(parts)}')
             for part in parts:
                 pdu = client.send_message(
                     source_addr_ton=smpplib.consts.SMPP_TON_ALNUM,
@@ -45,19 +48,27 @@ def handle_sms(client, messages):
                     esm_class=msg_type_flag,
                     registered_delivery=True,
                 )
+                # client.read_once()
                 print(pdu.sequence)
+
 
     except PDUError as e:
         print(f'Error sending message: {str(e)}')
-    client.listen()
+
+    # start listening
+    client.listen(timeout=10)
 
     # Unbind and Disconnect from the SMPP server
     client.unbind()
     client.disconnect()
-    # return make_response("SMS messages sent successfully.")
+    return make_response("SMS messages sent successfully.")
 
 
 # Handle delivery receipts (and any MO SMS)
 def handle_deliver_sm(pdu):
     print(f'delivered: {pdu.sequence} {pdu.receipted_message_id}\n')
     return 0
+
+
+def stop_listening(client):
+    client.stop_listening()
