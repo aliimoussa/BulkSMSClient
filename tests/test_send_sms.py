@@ -21,7 +21,6 @@ def test_send_multiple_sms_messages(client):
             {'dst_number': '1234567890', 'source_number': '0987654321', 'content': 'Test message 5'},
         ]}
     response = client.post('/api/send-sms', json=data)
-    print(response)
     assert response.status_code, 200
 
 
